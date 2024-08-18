@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STOW_FOLDERS="bin,zsh"
+STOW_FOLDERS="bin,zsh,nvim"
 DOTFILES="$HOME/.dotfiles"
 
 # Installing requirements
@@ -14,6 +14,7 @@ install_with_brew "fzf"
 install_with_brew "hugo"
 install_with_brew "neovim"
 install_with_brew "tmux"
+install_with_brew "ripgrep"
 
 # Setting permissions
 echo "Setting permissions..."
@@ -21,8 +22,7 @@ chmod 755 ~/.local/scripts/*
 
 echo "Setting up symlinks..."
 pushd $DOTFILES &>/dev/null
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
     echo "stow $folder"
     stow -D $folder
     stow $folder
