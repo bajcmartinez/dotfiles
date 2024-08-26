@@ -22,11 +22,4 @@ if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new-session -ds $selected_name -c $selected
 fi
 
-# if in tmux, switch client to session
-if [[ "$TERM" =~ "screen".* ]]; then
 tmux switch-client -t $selected_name
-    exit 0
-else # if not in tmux, attach to session
-    tmux attach-session -t $selected_name
-    exit 0
-fi
