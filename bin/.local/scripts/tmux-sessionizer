@@ -24,7 +24,7 @@ fi
 
 # if in tmux, switch client to session
 if [[ "$TERM" =~ "screen".* ]]; then
-    tmux switch-client -t $selected_name
+tmux switch-client -t $selected_name
     exit 0
 else # if not in tmux, attach to session
     tmux attach-session -t $selected_name

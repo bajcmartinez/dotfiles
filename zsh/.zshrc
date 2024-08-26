@@ -106,6 +106,7 @@ export PATH="$HOME/.local/scripts:$PATH"
 
 # Editor changes
 VIM="nvim"
+alias vim="nvim"
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dotfiles
 
