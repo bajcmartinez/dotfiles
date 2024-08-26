@@ -81,6 +81,7 @@ return {
                 styles = {
                     italic = false,
                 },
+                ColorMyPencils()
             })
         end
     },

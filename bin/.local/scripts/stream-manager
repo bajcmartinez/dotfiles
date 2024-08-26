@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+DISPLAY_ID=`/opt/homebrew/bin/displayplacer list | grep -B3 "32 inch external screen" | grep -i Persistent | awk '{print $4}'`
+
+case "$1" in
+stream)
+  echo "Going to stream mode"
+  /opt/homebrew/bin/displayplacer "id:$DISPLAY_ID res:1920x1080 hz:60 scaling:on"
+  open -a "Ecamm live"
+  ;;
+record)
+  echo "Going to record mode"
+  /opt/homebrew/bin/displayplacer "id:$DISPLAY_ID res:1920x1080 hz:60 scaling:on"
+  ;;
+stop)
+  echo "Exiting stream manager"
+  /opt/homebrew/bin/displayplacer "id:$DISPLAY_ID res:2560x1440 hz:60 scaling:on"
+  ;;
+esac
+

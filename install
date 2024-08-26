@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STOW_FOLDERS="bin,zsh,nvim"
+STOW_FOLDERS="bin,zsh,nvim,tmux"
 DOTFILES="$HOME/.dotfiles"
 
 # Installing requirements
@@ -18,7 +18,7 @@ install_with_brew "ripgrep"
 
 # Setting permissions
 echo "Setting permissions..."
-chmod 755 ~/.local/scripts/*
+chmod +x ~/.local/scripts/*
 
 echo "Setting up symlinks..."
 pushd $DOTFILES &>/dev/null
