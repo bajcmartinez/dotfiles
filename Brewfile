@@ -51,4 +51,14 @@ cask 'font-roboto'
 cask 'font-jetbrains-mono'
 
 # Mac App Store
-
+mas 'Final Cut Pro', id: 424389933
+mas 'Magnet', id: 441258766
+mas 'iA Writer', id: 775737590
+mas 'Things', id: 904280696
+mas 'Whatsapp', id: 1147396723
+mas 'Hidden Bar', id: 1452453066
+mas 'Affinity Photo 2', id: 1616822987
+mas 'Keystroke Pro', id: 1572206224
+mas 'Fantastical', id: 975937182
+mas 'Day One', id: 1055511498
+mas 'Kindle', id: 302584613
