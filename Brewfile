@@ -34,6 +34,7 @@ cask 'audacity'
 cask 'elgato-control-center'
 cask 'elgato-stream-deck'
 cask 'obs'
+cask 'loom'
 
 # Code Editors
 cask 'visual-studio-code'

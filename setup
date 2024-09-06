@@ -20,6 +20,7 @@ fi
 # Setting permissions
 echo "Setting permissions..."
 chmod +x ~/.local/scripts/*
+chmod +x ./sync-apps
 
 # Prepare all things brew
 echo "Installing Homebrew packages and apps..."
