@@ -15,6 +15,7 @@ return {
             "query",
             "regex",
             "tsx",
+            "go",
             "typescript",
             "vim",
             "yaml",
