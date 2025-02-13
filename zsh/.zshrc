@@ -100,18 +100,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add paths
-export PATH="$(brew --prefix)/opt/python@3.12/libexec/bin:$PATH"
-export PATH="$HOME/.local/scripts:$PATH"
-
-# Editor changes
-VIM="nvim"
-alias vim="nvim"
-export GIT_EDITOR=$VIM
-export DOTFILES=$HOME/.dotfiles
-
-# Bind terminal keys
-bindkey -s ^f "tmux-sessionizer\n"
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+source ~/.zsh_profile

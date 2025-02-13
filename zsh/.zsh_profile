@@ -1,0 +1,34 @@
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+# homebrew stuff
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add paths
+addToPathFront $(brew --prefix)/opt/python@3.12/libexec/bin
+addToPathFront $HOME/.local/scripts
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Editor changes
+VIM="nvim"
+alias vim="nvim"
+export GIT_EDITOR=$VIM
+
+# Bind terminal keys
+bindkey -s ^f "tmux-sessionizer\n"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)

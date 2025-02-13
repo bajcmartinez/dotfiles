@@ -12,9 +12,6 @@ fi
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Setting permissions
@@ -36,6 +33,3 @@ for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
     stow $folder
 done
 popd &>/dev/null
-
-echo "Changing MacOS settings for max productivity and comfort..."
-source ./macos
