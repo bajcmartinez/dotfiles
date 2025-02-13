@@ -112,3 +112,6 @@ export DOTFILES=$HOME/.dotfiles
 
 # Bind terminal keys
 bindkey -s ^f "tmux-sessionizer\n"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
