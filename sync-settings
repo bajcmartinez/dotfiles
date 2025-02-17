@@ -23,8 +23,8 @@ echo "Setting up symlinks..."
 pushd $DOTFILES &>/dev/null
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
     echo "stow $folder"
-    stow -D $folder
-    stow $folder
+    stow $folder -t $HOME -D
+    stow $folder -t $HOME
 done
 popd &>/dev/null
 
