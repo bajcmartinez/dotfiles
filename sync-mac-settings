@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Disable window animations
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+
+# Allow to drag windows from anywhere
+defaults write -g NSWindowShouldDragOnGesture -bool true

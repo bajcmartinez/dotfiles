@@ -2,4 +2,4 @@
 echo "Installing Homebrew packages and apps..."
 brew update
 brew tap homebrew/bundle
-brew bundle --file ./Brewfile
+brew bundle --file ./brew/Brewfile

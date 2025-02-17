@@ -15,27 +15,24 @@ brew 'tmux'
 brew 'ripgrep'
 
 # Day to day apps
+cask 'nikitabobko/tap/aerospace'
 cask '1password'
 cask '1password-cli'
 cask 'docker'
 cask 'google-chrome'
-cask 'firefox'
 cask 'slack'
 cask 'cleanshot'
 cask 'reader'
-cask 'superhuman'
 cask 'notion'
-cask 'spotify'
 cask 'caffeine'
+cask 'ghostty'
 
 # Streaming and Recording
-cask 'ecamm-live'
 cask 'audacity'
 cask 'elgato-control-center'
 cask 'elgato-stream-deck'
 cask 'logi-options+'
 cask 'obs'
-cask 'loom'
 
 # Code Editors
 cask 'visual-studio-code'

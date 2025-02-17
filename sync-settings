@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STOW_FOLDERS="bin,zsh,nvim,tmux"
+STOW_FOLDERS="bin,zsh,nvim,tmux,aerospace,ghostty"
 DOTFILES="$HOME/.dotfiles"
 
 echo "Setting up your Mac..."
@@ -19,12 +19,6 @@ echo "Setting permissions..."
 chmod +x ~/.local/scripts/*
 chmod +x ./sync-apps
 
-# Prepare all things brew
-echo "Installing Homebrew packages and apps..."
-brew update
-brew tap homebrew/bundle
-brew bundle --file ./Brewfile
-
 echo "Setting up symlinks..."
 pushd $DOTFILES &>/dev/null
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
@@ -33,3 +27,6 @@ for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g"); do
     stow $folder
 done
 popd &>/dev/null
+
+# Set my MacOS preferences
+./sync-mac-settings

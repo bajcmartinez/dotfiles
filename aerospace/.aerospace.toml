@@ -1,0 +1,74 @@
+# Mouse follows focus when focused monitor changes
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 0
+outer.bottom = 0
+outer.top = 0
+outer.right = 0
+
+[mode.main.binding]
+  # i3 wraps focus by default
+  alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
+  alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
+  alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
+  alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+
+  alt-f = 'fullscreen'
+
+  alt-z = 'layout tiles vertical horizontal'
+  alt-v = 'layout tiles horizontal vertical'
+
+  alt-1 = 'workspace 1' # Browse
+  alt-2 = 'workspace 2' # Work
+  alt-3 = 'workspace 3' # Terminal
+  alt-4 = 'workspace 4' # Notion
+  alt-5 = 'workspace 5' # Slack
+  alt-6 = 'workspace 6' # Photoshop
+  alt-7 = 'workspace 7' # Stream
+  alt-8 = 'workspace 8'
+  alt-9 = 'workspace 9'
+  alt-0 = 'workspace 10'
+
+  alt-shift-1 = 'move-node-to-workspace 1'
+  alt-shift-2 = 'move-node-to-workspace 2'
+  alt-shift-3 = 'move-node-to-workspace 3'
+  alt-shift-4 = 'move-node-to-workspace 4'
+  alt-shift-5 = 'move-node-to-workspace 5'
+  alt-shift-6 = 'move-node-to-workspace 6'
+  alt-shift-7 = 'move-node-to-workspace 7'
+  alt-shift-8 = 'move-node-to-workspace 8'
+  alt-shift-9 = 'move-node-to-workspace 9'
+  alt-shift-0 = 'move-node-to-workspace 10'
+
+  alt-shift-c = 'reload-config'
+  alt-r = 'mode resize'
+
+[mode.resize.binding]
+  cmd-h = [] # Disable "hide application"
+  cmd-alt-h = [] # Disable "hide others"
+  h = 'resize width -50'
+  j = 'resize height +50'
+  k = 'resize height -50'
+  l = 'resize width +50'
+  enter = 'mode main'
+  esc = 'mode main'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.Terminal'
+    run = 'move-node-to-workspace 3'
+
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+    if.app-id = 'com.obsproject.obs-studio'
+    run = 'move-node-to-workspace 7'
