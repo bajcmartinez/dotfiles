@@ -33,6 +33,7 @@ cask 'elgato-control-center'
 cask 'elgato-stream-deck'
 cask 'logi-options+'
 cask 'obs'
+cask 'ecamm-live'
 
 # Code Editors
 cask 'visual-studio-code'
